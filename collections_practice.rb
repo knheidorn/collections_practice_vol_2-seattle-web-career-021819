@@ -36,5 +36,16 @@ def count_elements(array)
 end
 
 def merge_data(array, data)
-
+  i = 0
+  while i < array.length
+    data.each do |element|
+      element.each do |key, v|
+        if array[i].has_value?(key)
+          array[i].merge!(v)
+        end
+      end
+    end
+  i+=1
+  end
+  return keys
 end
