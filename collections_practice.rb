@@ -51,4 +51,15 @@ def merge_data(array, data)
 end
 
 def find_cool(array)
-  
+  i = 0
+  array_2 = [];
+  while i < array.length do
+    array[i].collect do | key, values |
+      if values == "cool"
+        array_2 << cool[i]
+      return array_2
+      end
+    end
+    i+=1
+  end
+end
