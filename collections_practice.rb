@@ -63,3 +63,17 @@ def find_cool(array)
     i+=1
   end
 end
+
+def organize_schools(array)
+  output = {}
+  array.each do |key, city|
+    city.each do |start, location|
+      if !output.has_key?(location)
+        output[location] = [key]
+      elsif output.has_key?(location)
+        output[location] << key
+      end
+    end
+  end
+  output
+end
